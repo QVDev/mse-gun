@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:mpeg:dash:schema:mpd:2011"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+	profiles="urn:mpeg:dash:profile:isoff-live:2011"
+	type="dynamic"
+	minimumUpdatePeriod="PT500S"	
+	availabilityStartTime="2020-02-18T17:27:00Z"
+	publishTime="2020-02-18T17:27:00Z"
+    suggestedPresentationDelay="PT0.5S"
+	minBufferTime="PT0.1S">
+	<Period start="PT0.0S">
+		<AdaptationSet contentType="video">
+			<Representation id="0" mimeType="video/webm" codecs="opus,vp8">
+				<SegmentTemplate 
+                    timescale="1000" 
+                    duration="2000" 
+                    initialization="data:video/webm;base64,GkXfo59ChoEBQveBAULygQRC84EIQoKEd2VibUKHgQRChYECGFOAZwH/////////FUmpZpkq17GDD0JATYCGQ2hyb21lV0GGQ2hyb21lFlSua+quvdeBAXPFh8AW9Fh6m8uDgQKGhkFfT1BVU2Oik09wdXNIZWFkAQIAAIC7AAAAAADhjbWERzuAAJ+BAmJkgSCuqdeBAnPFh8XPY+gj5/uDgQFV7oEBhoVWX1ZQOOCMsIIEsLqCA4RTwIEB"
+                    media="msfc/$Number$.gun" 
+                    startNumber="0">
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+</MPD>

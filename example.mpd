@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+  <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:DASH:schema:MPD:2011"  xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011" profiles="urn:mpeg:dash:profile:isoff-main:2011" type="static" mediaPresentationDuration="PT0H9M56.46S">
+    <BaseURL>
+      http://localhost:8000/test.html
+    </BaseURL>
+    <Period start="PT0S">
+      <AdaptationSet bitstreamSwitching="false">
+        <Representation id="0" mimeType="video/webm" codecs="opus,vp8" width="320" height="240" startWithSAP="0" bandwidth="46986">
+          <BaseURL>/msfc/</BaseURL>
+          <SegmentTemplate media="$Number$.webm" timescale="10000">
+            <!-- Let's add a SegmentTimeline so the client can easily see
+                    how many segments there are -->
+            <SegmentTimeline>
+                <!-- r is the number of repeats _after_ the first one, so
+                        this reads:
+                        Starting from time 0, there are 11 (10 + 1) segments
+                        with a duration of (5400000 / @timescale) seconds. -->
+                <S t="0" r="2" d="8000"/>
+            </SegmentTimeline>
+        </SegmentTemplate>
+        </Representation>
+      </AdaptationSet>
+    </Period>
+  </MPD>

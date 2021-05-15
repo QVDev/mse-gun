@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="urn:mpeg:dash:schema:mpd:2011"
+     xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd"
+     type="dynamic" 
+     profiles="urn:mpeg:dash:profile:isoff-live:2011" 
+     minimumUpdatePeriod="PT5S"
+     minBufferTime="PT1S"
+     availabilityStartTime="2020-02-15T12:34:54+00:00" >
+  <BaseURL>
+      http://localhost:8000/test.html
+  </BaseURL>
+  <Period start="PT0S" id="3">
+    <AdaptationSet mimeType="video/webm">
+      <BaseURL>/msfc/</BaseURL>
+      <ContentComponent contentType="video" id="3"/>
+      <SegmentTemplate timescale="10"
+           duration="1"
+           startNumber="1"           
+           initialization=""
+           media="data:video/webm;base64,GkXfo59ChoEBQveBAULygQRC84EIQoKEd2VibUKHgQRChYECGFOAZwH/////////FUmpZpkq17GDD0JATYCGQ2hyb21lV0GGQ2hyb21lFlSua+quvdeBAXPFhxHZP/4InaODgQKGhkFfT1BVU2Oik09wdXNIZWFkAQIAAIC7AAAAAADhjbWERzuAAJ+BAmJkgSCuqdeBAnPFh0jF/OuMRCmDgQFV7oEBhoVWX1ZQOOCMsIIEsLqCA4RTwIEB"/>
+      <Representation id="3" width="1920" height="1080" mimeType="video/webm" codecs="opus,vp8">
+        <SubRepresentation contentComponent="3"/>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>

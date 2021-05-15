@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <!-- Shaka Player compiled library: -->
+    <script src="https://cdn.jsdelivr.net/npm/shaka-player@2.5.9/dist/shaka-player.ui.debug.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script> -->
+    <!-- <script src="sketch.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/QVDev/GunStreamer@0.0.9/js/GunRecorder.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/QVDev/GunStreamer@0.0.9/js/GunStreamer.js"></script>
+    <script src="dash.js"></script>
+    <script src="myapp.js"></script>
+</head>
+
+<body>
+    <!-- <div id="sketch-holder" style="display: inline;"></div> -->
+    <video muted controls autoplay width="360" height="200" id="bunny"></video>
+    <video id="shaka" width="360" height="200" controls autoplay></video>
+    <button id="record_button" type="button" onclick="gunRecorder.record()">Start Recording</button>
+    <script src="gunstreamer.js"></script>
+</body>
+
+</html>
