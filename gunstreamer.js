@@ -42,7 +42,7 @@ var recorder_config = {
     video_id: "bunny", //Video html element id
     onDataAvailable: gunStreamer.onDataAvailable, //MediaRecorder data available callback
     onRecordStateChange: onRecordStateChange, //Callback for recording state
-    recordInterval: 1000,
+    recordInterval: 300,
     experimental: false, //This is custom time interval and very unstable with audio. Only video is more stable is interval quick enough? Audio
     debug: false //For debug logs
 }
